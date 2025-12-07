@@ -8,7 +8,7 @@
 
 ## ⭐ Abstract
 
-Medical image segmentation plays a significant role in treatment planning and disease tracking. However, it faces two key challenges: one is the fuzzy transition region (soft boundary) between foreground and background, which is exacerbated by low contrast; the other is the misleading co-occurrence of salient and non-salient objects, which affects the accuracy of the model in extracting key segmentation features. To overcome these challenges, we introduce DecoSeg, a new framework designed to enhance medical image segmentation. DecoSeg integrates Feature Decoupling Unit (FDU), which dynamically separates the encoded features into foreground, background, and uncertain regions, and uses an uncertainty loss to reduce the interference of soft boundaries. Plus, our Contrast-driven Feature Fusion Unit (CFFU) further leverages the foreground, background, and uncertain regions from the FDU to distinguish salient targets from non-salient ones, thereby optimizing the accuracy of detecting salient targets in scenes with misleading co-occurrences. DecoSeg is comprehensively evaluated on 5 different medical image datasets, verifying its superior performance, demonstrating its significant value in the field of medical image segmentation.
+Medical image segmentation plays a significant role in treatment planning and disease tracking. However, it faces two key challenges: one is the fuzzy transition region (soft boundary) between foreground and background, which is exacerbated by low contrast; the other is the misleading co-occurrence of salient and non-salient objects, which affects the accuracy of the model in extracting key segmentation features. To overcome these challenges, we introduce DecoSeg, a new framework designed to enhance medical image segmentation. DecoSeg integrates Feature Decoupling Unit (FDU), which dynamically separates the encoded features into foreground, background, and uncertain regions, and uses an uncertainty loss to reduce the interference of soft boundaries. Plus, our Contrast-driven Feature Fusion Unit (CFFU) further leverages the foreground, background, and uncertain regions from the FDU to distinguish salient objects from non-salient ones, thereby optimizing the accuracy of detecting salient objects in scenes with misleading co-occurrences. DecoSeg is comprehensively evaluated on 5 different medical image datasets, verifying its superior performance, demonstrating its significant value in the field of medical image segmentation.
 
 ## 🚀 Introduction
 
@@ -49,7 +49,7 @@ pip install scikit-learn matplotlib thop h5py SimpleITK scikit-image medpy yacs 
 
 ### 2. Prepare Datasets
 
-- Download datasets: ISIC2018 from this [link](https://challenge.isic-archive.com/data/#2018), Kvasir from this[link](https://link.zhihu.com/?target=https%3A//datasets.simula.no/downloads/kvasir-seg.zip), BUSI from this [link](https://scholar.cu.edu.eg/?q=afahmy/pages/dataset), Moun-Seg from this [link](https://www.kaggle.com/datasets/tuanledinh/monuseg2018), and COVID-19 from this [link](https://drive.usercontent.google.com/download?id=1FHx0Cqkq9iYjEMN3Ldm9FnZ4Vr1u3p-j&export=download&authuser=0).
+- Download datasets: ISIC2018 from this [link](https://challenge.isic-archive.com/data/#2018).
 
 
 - Folder organization: put datasets into ./data/datasets folder.
@@ -85,7 +85,3 @@ We compare our method against 13 state-of-the-art methods. The red box indicates
 <div align="center">
 Performance comparison with ten SOTA methods on ISIC2018, Kvasir, BUSI, COVID-19 and Monu-Seg datasets.
 </div>
-
-## 🎫 License
-
-The content of this project itself is licensed under [LICENSE](https://github.com/Paper2025/DecoSeg/tree/main?tab=Apache-2.0-1-ov-file).
